@@ -1,0 +1,13 @@
+AllCops:
+  Exclude:
+    - 'db/**/**'
+    - 'bin/**/**'
+    - 'vendor/**/**'
+    - 'tmp/**/**'
+    - 'config/**/**'
+    - 'config.ru'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'Rakefile'
+    - 'spec/**/**'
+    - 'app/channels/**/**'
