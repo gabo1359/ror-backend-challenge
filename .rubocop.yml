@@ -1,8 +1,13 @@
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
 AllCops:
   Exclude:
     - 'db/**/**'
     - 'bin/**/**'
     - 'vendor/**/**'
+    - 'lib/**/**'
     - 'tmp/**/**'
     - 'config/**/**'
     - 'config.ru'
