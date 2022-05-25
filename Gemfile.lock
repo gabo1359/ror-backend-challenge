@@ -66,6 +66,9 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
+      rake (>= 10.4, < 14.0)
     ast (2.4.2)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
@@ -77,6 +80,8 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -180,8 +185,10 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  annotate
   bootsnap
   debug
+  faker
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
