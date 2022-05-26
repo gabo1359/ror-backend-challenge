@@ -26,6 +26,6 @@ class Movie < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true, length: { minimum: 2 }
   validates :creation_date, presence: true, format: { with: /\d{4}(-\d{2}){2}/,
-    message: "incorrect format of date (YYYY-MM-DD)" }
-  validates :rating, presence: true, :inclusion => 1..5
+            message: 'incorrect format of date (YYYY-MM-DD)' }
+  validates :rating, presence: true, inclusion: 1..5
 end
