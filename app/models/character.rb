@@ -14,4 +14,8 @@
 #
 class Character < ApplicationRecord
   has_and_belongs_to_many :movies
+
+  validates :name, presence: true, length: { minimum: 2 }
+  validates :age, presence: true, numericality: { only_integer: true }
+  validates :weight, presence: true
 end
