@@ -16,7 +16,7 @@ class Characters::GetCharactersQuery < BaseQuery
     characters = weightier_than.present? ? characters.where('weight > ?', weightier_than) : characters
     characters = lightier_than.present? ? characters.where('weight < ?', lightier_than) : characters
     characters = age.present? ? characters.where(age: age) : characters
-    characters = name.present? ? characters.where(name: name) : characters
+    characters = characters.where(name: name) if name.present?
     characters
   end
 end
