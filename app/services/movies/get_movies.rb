@@ -8,7 +8,7 @@ class Movies::GetMovies < BaseService
   end
 
   def call
-    movies = Movie.all
+    movies = Movies::GetMoviesQuery.call(query_params)
     movies.map do |movie|
       {
         title: movie.title,
