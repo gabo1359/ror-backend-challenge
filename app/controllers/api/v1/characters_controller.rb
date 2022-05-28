@@ -3,7 +3,7 @@
 class Api::V1::CharactersController < ApplicationController
   def index
     characters = Characters::GetCharacters.call(params)
-    render json: characters, adapter: :json, root: :data
+    render json: { data: characters }
   end
 
   def show
