@@ -1,4 +1,4 @@
-# frozen_string_literl: true
+# frozen_string_literal: true
 
 class Characters::Destroyer < BaseService
   attr_reader :id

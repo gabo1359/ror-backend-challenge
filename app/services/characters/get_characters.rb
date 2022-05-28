@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 class Characters::GetCharacters < BaseService
+  attr_reader :args
+
   def initialize(args)
-    args = args
+    @args = args
   end
 
   def call

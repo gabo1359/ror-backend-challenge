@@ -4,6 +4,8 @@ Style/Documentation:
   Enabled: false
 Layout/HashAlignment:
   Enabled: false
+Lint/MissingSuper:
+  Enabled: false
 AllCops:
   Exclude:
     - 'db/**/**'

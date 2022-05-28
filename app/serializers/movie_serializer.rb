@@ -4,7 +4,7 @@ class MovieSerializer < ActiveModel::Serializer
   attributes :title, :rating, :genre
 
   has_many :characters
-  
+
   def genre
     object.genre.name
   end
