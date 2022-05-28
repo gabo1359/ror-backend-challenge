@@ -9,8 +9,8 @@ class Characters::GetCharacters < BaseService
 
   def call
     characters = Characters::GetCharactersQuery.call(query_params)
-    # characters.map do |character|
-    #   { name: character.name }
-    # end
+    characters.map do |character|
+      { name: character.name }
+    end
   end
 end
