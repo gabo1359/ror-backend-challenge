@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 class Characters::GetCharacters < BaseService
-  attr_reader :args
+  attr_reader :query_params
 
   def initialize(args)
-    @args = args
+    @query_params = args
   end
 
   def call
-    Character.all.map do |character|
-      { name: character.name }
-    end
+    characters = Characters::GetCharactersQuery.call(query_params)
+    # characters.map do |character|
+    #   { name: character.name }
+    # end
   end
 end
