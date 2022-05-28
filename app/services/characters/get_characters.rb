@@ -6,6 +6,8 @@ class Characters::GetCharacters < BaseService
   end
 
   def call
-    Character.all
+    Character.all.map do |character|
+      { name: character.name }
+    end
   end
 end
