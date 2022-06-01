@@ -29,6 +29,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :jwt_authenticatable, jwt_revocation_strategy: self
 
+  validate :new_user?
+
+  def new_user?
+    return if errors.messages[:email].empty?
+
+    raise CustomError.new('Validation error', :unprocessable_entity, errors.messages)
+  end
+
   after_create :send_welcome_email
 
   def send_welcome_email

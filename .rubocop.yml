@@ -6,6 +6,8 @@ Layout/HashAlignment:
   Enabled: false
 Lint/MissingSuper:
   Enabled: false
+Metrics:
+  Enabled: false
 AllCops:
   Exclude:
     - 'db/**/**'
