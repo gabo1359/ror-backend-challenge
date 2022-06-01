@@ -13,11 +13,15 @@
 #  updated_at :datetime         not null
 #
 class CharacterSerializer < ActiveModel::Serializer
-  attributes :name, :age, :weight, :story
+  attributes :name, :age, :weight, :story, :image
 
   has_many :movies
 
   def story
     object.story.nil? ? 'N/A' : object.story
+  end
+
+  def image
+    object.image.url || 'N/A'
   end
 end

@@ -12,7 +12,8 @@ class Movies::GetMovies < BaseService
     movies.map do |movie|
       {
         title: movie.title,
-        creation_date: movie.creation_date
+        creation_date: movie.creation_date,
+        image: movie.image.url || 'N/A'
       }
     end
   end

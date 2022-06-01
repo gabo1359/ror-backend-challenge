@@ -10,7 +10,10 @@ class Characters::GetCharacters < BaseService
   def call
     characters = Characters::GetCharactersQuery.call(query_params)
     characters.map do |character|
-      { name: character.name }
+      {
+        name: character.name,
+        image: character.image.url || 'N/A'
+      }
     end
   end
 end

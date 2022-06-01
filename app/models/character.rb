@@ -15,6 +15,8 @@
 class Character < ApplicationRecord
   has_and_belongs_to_many :movies
 
+  has_one_attached :image
+
   validates :name, presence: true, length: { minimum: 2 }
   validates :age, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 18,
                                                   less_than_or_equal_to: 65 }
