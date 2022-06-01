@@ -24,6 +24,8 @@ class Movie < ApplicationRecord
   belongs_to :genre
   has_and_belongs_to_many :characters
 
+  has_one_attached :image
+
   validates :title, presence: true, uniqueness: true, length: { minimum: 2 }
   validates :creation_date, presence: true, format: { with: /\d{4}(-\d{2}){2}/,
             message: 'incorrect format of date (YYYY-MM-DD)' }

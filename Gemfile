@@ -53,3 +53,5 @@ end
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'devise' 
 gem 'devise-jwt'
+gem "aws-sdk-s3", require: false
+

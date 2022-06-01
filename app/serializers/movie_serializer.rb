@@ -21,11 +21,15 @@
 #  fk_rails_...  (genre_id => genres.id)
 #
 class MovieSerializer < ActiveModel::Serializer
-  attributes :title, :rating, :genre
+  attributes :title, :rating, :genre, :image
 
   has_many :characters
 
   def genre
     object.genre.name
+  end
+
+  def image
+    object.image.url || 'N/A'
   end
 end
